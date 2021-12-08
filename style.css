@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "IranSans";
+  src: url(fonts/IRANSansWeb.woff);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "IranSans";
+  list-style: none;
+}
+
+:root {
+  --primaryColor: #fb77a1;
+  --mainWhite: #edecef;
+  --mainBlack: #17181f;
+  --mainGray: #20212c;
+  --secondaryGray: #bdbcbf;
+  --mainGreen: #71c6c1;
+  --futureGreen: #276e49;
+  --todayGold: #7f6140;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all linear 0.3s;
+}
+
+.main-layout {
+  display: flex;
+}
+
+header {
+  width: 100%;
+  height: 60px;
+  background-color: var(--mainGray);
+  box-shadow: 0 0 20px var(--mainBlack);
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+aside {
+  width: 350px;
+  height: 100vh;
+  background-color: var(--mainGray);
+}
+
+article {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--mainBlack);
+}
+
+.tools {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header div {
+  display: flex;
+  align-items: flex-end;
+}
+
+header div:not(:first-child) {
+  width: 110px;
+  justify-content: space-between;
+}
+
+header i {
+  font-size: 24px;
+  color: var(--secondaryGray);
+  display: flex;
+  align-items: center;
+}
+
+header span {
+  color: var(--secondaryGray);
+  font-size: 14px;
+}
