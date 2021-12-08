@@ -15,10 +15,12 @@
   --mainWhite: #edecef;
   --mainBlack: #17181f;
   --mainGray: #20212c;
-  --secondaryGray: #bdbcbf;
+  --secondaryGray: #272833;
+  --fontGray: #bdbcbf;
   --mainGreen: #71c6c1;
   --futureGreen: #276e49;
   --todayGold: #7f6140;
+  --mainpurple: #af68e6;
   --mainSpacing: 0.1rem;
   --mainTransition: all linear 0.3s;
 }
@@ -33,7 +35,7 @@ header {
   height: 60px;
   background-color: var(--mainGray);
   box-shadow: 0 0 20px var(--mainBlack);
-  position: fixed;
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -47,9 +49,11 @@ header {
   align-items: center;
 }
 
-header div {
+header .tools div {
   display: flex;
+  flex-direction: row;
   align-items: flex-start;
+  cursor: pointer;
 }
 
 header .tools div:not(:first-child) {
@@ -65,7 +69,7 @@ header i {
 }
 
 header span {
-  color: var(--secondaryGray);
+  color: var(--fontGray);
   font-size: 14px;
 }
 
@@ -90,6 +94,25 @@ header span {
     rgba(109, 20, 142, 1) 0%,
     rgba(255, 0, 237, 1) 100%
   );
+  cursor: pointer;
+}
+
+.profile .search {
+  height: 36px;
+  width: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.profile .ring {
+  height: 36px;
+  width: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .picture {
@@ -97,6 +120,7 @@ header span {
   width: 36px;
   border-radius: 50%;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .picture img {
@@ -104,12 +128,58 @@ header span {
   height: auto;
 }
 
+/* ASIDE */
 aside {
-  width: 350px;
+  width: 300px;
   height: 100vh;
   background-color: var(--mainGray);
 }
 
+aside h4 {
+  width: 100%;
+  padding: 10px 30px;
+  margin-top: 10px;
+  color: var(--fontGray);
+}
+.collections {
+  display: flex;
+  flex-direction: column;
+}
+
+.collections label {
+  padding: 10px 30px;
+  color: var(--mainWhite);
+  cursor: pointer;
+}
+
+.collections label i {
+  padding: 13px;
+  margin-right: 5px;
+  border-radius: 13px;
+  font-size: 12px;
+}
+
+.collections label:nth-of-type(1) i {
+  background-color: var(--primaryColor);
+}
+
+.collections label:nth-of-type(2) i {
+  background-color: var(--mainGreen);
+}
+
+.collections label:nth-of-type(3) i {
+  background-color: var(--mainpurple);
+}
+
+input:checked + label {
+  background-color: var(--secondaryGray);
+}
+
+aside input[type="radio"] {
+  background-color: transparent;
+  display: none;
+}
+/* Article */
 article {
   width: 100%;
   height: 100vh;
