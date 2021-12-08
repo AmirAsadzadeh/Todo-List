@@ -39,15 +39,15 @@
         <h4>collections</h4>
         <div class="collections">
           <input type="radio" id="school" name="collections" checked />
-          <label for="school"
+          <label for="school" class="aside-label"
             ><i class="fas fa-book-open"></i><span> School </span></label
           >
           <input type="radio" id="personal" name="collections" />
-          <label for="personal"
+          <label for="personal" class="aside-label"
             ><i class="fas fa-user-alt"></i><span> Personal </span></label
           >
           <input type="radio" id="design" name="collections" />
-          <label for="design"
+          <label for="design" class="aside-label"
             ><i class="fas fa-paint-brush"></i><span> Design </span></label
           >
         </div>
@@ -64,7 +64,23 @@
             <button class="add-btn"><i class="fas fa-plus"></i></button>
             <input type="text" name="" id="" placeholder="Add a Task" />
           </div>
-          <div class="tasks"></div>
+          <div class="tasks">
+            <div class="tasks-list">
+              <h5>Tasks - <span>0</span></h5>
+              <div class="task">
+                <input type="checkbox" id="uncompleted" />
+
+                <p for="uncompleted" class="task-label">Testing content</p>
+              </div>
+            </div>
+            <div class="completed-tasks-list">
+              <h5>Copmpleted - <span>0</span></h5>
+              <div class="task">
+                <input type="checkbox" id="completed" value="hi" checked />
+                <p for="completed" class="task-label">Testing content</p>
+              </div>
+            </div>
+          </div>
           <div class="completed"></div>
         </div>
       </article>

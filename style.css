@@ -8,6 +8,12 @@
   box-sizing: border-box;
   font-family: "IranSans";
   list-style: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 :root {
@@ -146,32 +152,32 @@ aside h4 {
   flex-direction: column;
 }
 
-.collections label {
+.collections .aside-label {
   padding: 10px 30px;
   color: var(--mainWhite);
   cursor: pointer;
 }
 
-.collections label i {
+.collections .aside-label i {
   padding: 13px;
   margin-right: 5px;
   border-radius: 13px;
   font-size: 12px;
 }
 
-.collections label:nth-of-type(1) i {
+.collections .aside-label:nth-of-type(1) i {
   background-color: var(--primaryColor);
 }
 
-.collections label:nth-of-type(2) i {
+.collections .aside-label:nth-of-type(2) i {
   background-color: var(--mainGreen);
 }
 
-.collections label:nth-of-type(3) i {
+.collections .aside-label:nth-of-type(3) i {
   background-color: var(--mainpurple);
 }
 
-input:checked + label {
+input:checked + .aside-label {
   background-color: var(--secondaryGray);
 }
 
@@ -234,7 +240,7 @@ article {
   width: 100%;
   height: 50px;
   margin-top: 40px;
-  padding: 7px 7px;
+  padding: 7px 15px;
   display: flex;
   align-items: center;
   border: 2px solid var(--mainGray);
@@ -266,4 +272,49 @@ article {
   font-weight: bold;
   border: none;
   outline: none;
+}
+
+/* Tasks part */
+.tasks {
+  width: 100%;
+  margin-top: 40px;
+}
+.tasks-list h5,
+.completed-tasks-list h5 {
+  padding: 15px 7px;
+  color: var(--fontGray);
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  background-color: var(--secondaryGray);
+  border-radius: 15px;
+  padding: 0 15px;
+  color: var(--mainWhite);
+  height: 60px;
+}
+
+.task input {
+  appearance: none;
+  border: 3px solid var(--primaryColor);
+  border-radius: 8px;
+  width: 22px;
+  height: 22px;
+}
+
+.task span {
+  width: 100%;
+  height: 100%;
+}
+.task input:checked {
+  background-color: var(--primaryColor);
+}
+
+.task .task-label {
+  width: 100%;
+  height: 100%;
+  margin-left: 10px;
+  display: flex;
+  align-items: center;
 }
