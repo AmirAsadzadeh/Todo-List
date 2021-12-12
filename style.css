@@ -309,7 +309,7 @@ article {
 }
 .task input:checked {
   background-color: var(--primaryColor);
-  background-image: url(pic/green-tick-checkmark-icon-vector-22691505.jpg);
+  background-image: url(pic/tik.png);
   background-size: cover;
   background-position: center;
 }
