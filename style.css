@@ -67,6 +67,19 @@ header .tools div {
   cursor: pointer;
 }
 
+header .ham-menu {
+  border-radius: 15px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center !important;
+}
+
+header .active-background {
+  background-color: var(--mainBlack);
+}
+
 header .tools div:not(:first-child) {
   width: 110px;
   justify-content: space-between;
