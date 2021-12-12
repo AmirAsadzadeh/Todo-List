@@ -24,6 +24,7 @@
   --secondaryGray: #272833;
   --fontGray: #bdbcbf;
   --mainGreen: #71c6c1;
+  --mainRed: #de2121;
   --futureGreen: #276e49;
   --todayGold: #7f6140;
   --mainpurple: #af68e6;
@@ -257,10 +258,15 @@ article {
   justify-content: center;
   align-items: center;
   border-radius: 8px;
-  border: none;
+  border: 3px solid var(--primaryColor);
   background-color: var(--primaryColor);
   color: var(--mainBlack);
   cursor: pointer;
+  transition: all ease-in 0.1s;
+}
+.add-task .add-btn:hover {
+  background-color: var(--mainBlack);
+  color: var(--primaryColor);
 }
 
 .add-task input {
@@ -323,4 +329,14 @@ article {
   margin-left: 10px;
   display: flex;
   align-items: center;
+}
+.task .trash-btn {
+  width: 36px;
+  height: 36px;
+  font-size: 1.3rem;
+  color: var(--mainRed);
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
 }
