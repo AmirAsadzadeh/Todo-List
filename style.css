@@ -169,12 +169,15 @@ aside h4 {
 .collections {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
 }
 
 .collections .aside-label {
   padding: 10px 30px;
   color: var(--mainWhite);
   cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
 .collections .aside-label i {
