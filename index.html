@@ -69,7 +69,7 @@
             </div>
           </div>
 
-          <form action="" class="add-task">
+          <form action="" class="add-task" autocomplete="off">
             <button class="add-btn" id="add-btn" type="submit">
               <i class="fas fa-plus"></i>
             </button>
@@ -83,10 +83,10 @@
 
           <div class="tasks">
             <div class="tasks-list" id="task-list">
-              <h5>Tasks - <span>0</span></h5>
+              <h5>Tasks - <span id="uncompeleted-count">0</span></h5>
             </div>
             <div class="completed-tasks-list">
-              <h5>Copmpleted - <span>0</span></h5>
+              <h5>Copmpleted - <span id="compeleted-count"></span></h5>
               <div class="task">
                 <input type="checkbox" id="completed" value="hi" checked />
                 <label for="completed" class="task-label"
