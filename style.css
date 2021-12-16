@@ -324,6 +324,7 @@ article {
   padding: 0 15px;
   color: var(--mainWhite);
   height: 60px;
+  margin-bottom: 10px;
 }
 
 .task input {

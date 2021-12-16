@@ -68,23 +68,22 @@
               </select>
             </div>
           </div>
-          <div class="add-task">
-            <button class="add-btn"><i class="fas fa-plus"></i></button>
-            <input type="text" name="" id="" placeholder="Add a Task" />
-          </div>
-          <div class="tasks">
-            <div class="tasks-list">
-              <h5>Tasks - <span>0</span></h5>
-              <div class="task">
-                <input type="checkbox" id="uncompleted" />
 
-                <label for="uncompleted" class="task-label"
-                  >Testing content</label
-                >
-                <button class="trash-btn">
-                  <i class="far fa-trash-alt"></i>
-                </button>
-              </div>
+          <form action="" class="add-task">
+            <button class="add-btn" id="add-btn" type="submit">
+              <i class="fas fa-plus"></i>
+            </button>
+            <input
+              type="text"
+              name=""
+              id="todo-input"
+              placeholder="Add a Task"
+            />
+          </form>
+
+          <div class="tasks">
+            <div class="tasks-list" id="task-list">
+              <h5>Tasks - <span>0</span></h5>
             </div>
             <div class="completed-tasks-list">
               <h5>Copmpleted - <span>0</span></h5>
