@@ -14,9 +14,17 @@ const taskList = document.getElementById("task-list");
 
 const unCompeletedCount = document.getElementById("uncompeleted-count");
 
+const unCompeletedPart = document.getElementById("task-list");
+
 //event listeners
 
-collectionBtn.addEventListener("click", () => {
+collectionBtn.addEventListener("click", hamOpener);
+
+addTaskBtn.addEventListener("click", add);
+
+//functions
+
+function hamOpener() {
   if (flag === 1) {
     collectionBtn.classList.remove("active-background");
     document.querySelector("aside").style.width = "0";
@@ -28,11 +36,7 @@ collectionBtn.addEventListener("click", () => {
 
     flag = 1;
   }
-});
-
-addTaskBtn.addEventListener("click", add);
-
-//functions
+}
 
 function add(event) {
   completeTaskCounter += 1;
@@ -49,13 +53,10 @@ function add(event) {
     newTask.classList.add("task");
 
     newTask.innerHTML = `<input type="checkbox" id="uncompleted-${completeTaskCounter}" />
-  <label for="uncompleted-${completeTaskCounter}" class="task-label"
-    >${todoInput.value}</label
-  >
-  <button class="trash-btn">
-    <i class="far fa-trash-alt"></i>
-  </button>
-</div>`;
+                         <label for="uncompleted-${completeTaskCounter}" class="task-label">${todoInput.value}</label>
+                         <button class="trash-btn">
+                           <i class="far fa-trash-alt"></i>
+                         </button>`;
     todoInput.value = "";
   }
 }
