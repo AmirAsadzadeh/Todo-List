@@ -87,11 +87,21 @@
             </div>
             <div class="completed-tasks-list">
               <h5>Compeleted - <span id="compeleted-count"></span></h5>
-              <div class="task">
-                <input type="checkbox" id="completed" value="hi" checked />
-                <label for="completed" class="task-label"
-                  ><del> Testing content</del></label
-                >
+              <div class="task opacity">
+                <div class="parent checked">
+                  <input
+                    type="checkbox"
+                    id="uncompleted-${completeTaskCounter}"
+                    class="checkbox"
+                    checked
+                  />
+                  <label
+                    for="uncompleted-${completeTaskCounter}"
+                    class="task-label"
+                    id="task-value"
+                    >Testin Content</label
+                  >
+                </div>
                 <button class="trash-btn">
                   <i class="far fa-trash-alt"></i>
                 </button>

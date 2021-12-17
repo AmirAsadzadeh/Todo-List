@@ -39,11 +39,11 @@ function hamOpener() {
 }
 
 function add(event) {
-  completeTaskCounter += 1;
-
   event.preventDefault();
 
   if (todoInput.value !== "") {
+    completeTaskCounter += 1;
+
     const newTask = document.createElement("div");
 
     unCompeletedCount.innerHTML = `${completeTaskCounter}`;
@@ -52,8 +52,8 @@ function add(event) {
 
     newTask.classList.add("task");
 
-    newTask.innerHTML = `<div class="parent"><input type="checkbox" id="uncompleted-${completeTaskCounter}" class="check" />
-                         <label for="uncompleted-${completeTaskCounter}" class="check task-label" id="task-value">${todoInput.value}</label></div>
+    newTask.innerHTML = `<div class="parent"><input type="checkbox" id="uncompleted-${completeTaskCounter}" class="checkbox" />
+                         <label for="uncompleted-${completeTaskCounter}" class=" task-label" id="task-value">${todoInput.value}</label></div>
                          <button class="trash-btn">
                            <i class="far fa-trash-alt"></i>
                          </button>`;
@@ -69,7 +69,8 @@ function removeCheck(event) {
     completeTaskCounter -= 1;
     unCompeletedCount.innerHTML = `${completeTaskCounter}`;
   }
-  if (item.classList[0] === "check") {
-    item.classList.toggle("checked");
+  if (item.classList.contains("checkbox")) {
+    item.parentElement.classList.toggle("checked");
+    item.parentElement.parentElement.classList.toggle("opacity");
   }
 }
