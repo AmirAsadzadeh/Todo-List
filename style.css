@@ -319,12 +319,21 @@ article {
 .task {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background-color: var(--secondaryGray);
   border-radius: 15px;
   padding: 0 15px;
   color: var(--mainWhite);
   height: 60px;
   margin-bottom: 10px;
+}
+.task .trash-btn i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  text-decoration: none !important;
 }
 
 .task input {
@@ -362,4 +371,18 @@ article {
   border: none;
   outline: none;
   cursor: pointer;
+}
+
+.task .parent {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.checked {
+  text-decoration: line-through;
+}
+.opacity {
+  opacity: 0.3;
 }

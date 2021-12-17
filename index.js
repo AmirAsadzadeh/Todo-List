@@ -14,13 +14,13 @@ const taskList = document.getElementById("task-list");
 
 const unCompeletedCount = document.getElementById("uncompeleted-count");
 
-const unCompeletedPart = document.getElementById("task-list");
-
 //event listeners
 
 collectionBtn.addEventListener("click", hamOpener);
 
 addTaskBtn.addEventListener("click", add);
+
+taskList.addEventListener("click", removeCheck);
 
 //functions
 
@@ -52,11 +52,24 @@ function add(event) {
 
     newTask.classList.add("task");
 
-    newTask.innerHTML = `<input type="checkbox" id="uncompleted-${completeTaskCounter}" />
-                         <label for="uncompleted-${completeTaskCounter}" class="task-label">${todoInput.value}</label>
+    newTask.innerHTML = `<div class="parent"><input type="checkbox" id="uncompleted-${completeTaskCounter}" class="check" />
+                         <label for="uncompleted-${completeTaskCounter}" class="check task-label" id="task-value">${todoInput.value}</label></div>
                          <button class="trash-btn">
                            <i class="far fa-trash-alt"></i>
                          </button>`;
     todoInput.value = "";
+  }
+}
+
+function removeCheck(event) {
+  const item = event.target;
+  if (item.classList[1] === "fa-trash-alt") {
+    const todoTask = item.parentElement.parentElement;
+    todoTask.remove();
+    completeTaskCounter -= 1;
+    unCompeletedCount.innerHTML = `${completeTaskCounter}`;
+  }
+  if (item.classList[0] === "check") {
+    item.classList.toggle("checked");
   }
 }
